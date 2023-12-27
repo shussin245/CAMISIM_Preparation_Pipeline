@@ -15,7 +15,7 @@ import numpy as np
 import math
 import csv
 
-"""Creating Sequence Names"""
+"""Creating Genome Names"""
 
 random.seed(100442971)
 pct_ids = [50, 80, 90, 95, 96, 97, 98, 99, 99.5, 99.9]
@@ -56,7 +56,7 @@ for a in pct_ids:
 #names_set = set(names)
 #print(len(names_set))
 
-"""Generating Configuration Files for CAMISIM
+"""Generating *de novo* Files for CAMISIM
 
 1. Create a for-loop that goes through each of the names in the names list
 2. Obtain the # of strains from each name
