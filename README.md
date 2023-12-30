@@ -58,22 +58,19 @@ It's important to thoroughly check the file paths for the inputs and outputs. I 
 /CAMISIM/Config_Files/ - contains all the metagenome and id to genome files for every reference genome or reference+strain set
 
 # Terminal Commands
+To pull the CAMISIM docker container:
 ```
 docker pull cami/camisim:1.3.0
 ```
-is required to pull the CAMSIM docker container
-
+To run CAMISIM:
 ```
 docker run -v "/Users/sarahussin/CAMISIM:/input:rw" -v "/Users/sarahussin/CAMISIM_Output:/output:rw" cami/camisim:1.3.0 metagenomesimulation.py /input/default_config1.ini
 ```
-is the command to run CAMISIM
-
+To make a shell script executable:
 ```
-chmod +x
+chmod +x CAMISIM.sh
 ```
-is required to make a shell script executable
-
+To run a shell script:
 ```
 ./CAMISIM.sh
 ```
-is required to run a shell script
