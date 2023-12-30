@@ -59,12 +59,21 @@ It's important to thoroughly check the file paths for the inputs and outputs. I 
 
 # Terminal Commands
 ```
-docker pull cami/camisim:1.3.0}
+docker pull cami/camisim:1.3.0
 ```
 is required to pull the CAMSIM docker container
 
-{docker run -v "/Users/sarahussin/CAMISIM:/input:rw" -v "/Users/sarahussin/CAMISIM_Output:/output:rw" cami/camisim:1.3.0 metagenomesimulation.py /input/default_config1.ini} is the command to run CAMISIM
+```
+docker run -v "/Users/sarahussin/CAMISIM:/input:rw" -v "/Users/sarahussin/CAMISIM_Output:/output:rw" cami/camisim:1.3.0 metagenomesimulation.py /input/default_config1.ini
+```
+is the command to run CAMISIM
 
-{chmod +x} is required to make a shell script executable
+```
+chmod +x
+```
+is required to make a shell script executable
 
-{./CAMISIM.sh} is required to run a shell script
+```
+./CAMISIM.sh
+```
+is required to run a shell script
