@@ -74,3 +74,8 @@ To run a shell script:
 ```
 ./CAMISIM.sh
 ```
+# Future Improvements
+
+1. There is definitely a way to include all the .py files into a single file. I will try to work on a Python single script that can generate the genomes, save each genome in a .fa file, create the *de novo* files, and create the configuration files. Either this file can be executed through UNIX terminal or I can design a user-friendly Jupyter Notebook that individuals can curate to their own research needs.
+
+2. This README will be edited now and then to include more information that might be helpful. Information on what each .py script does and detailed information on file paths and CAMISIM configurations can be particularly helpful for anyone who isn't familiar with Python, CAMISIM, and UNIX terminal.
