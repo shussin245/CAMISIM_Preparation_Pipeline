@@ -37,7 +37,7 @@ starting at 0.
 
 ## CAMISIM Configuration Files
 
-Finally, this code generates the configuration files for n number of reference+strain sets. Keep in mind that most options have to be set manually within the code itself to fit individual needs. Please take a look at the CAMISIM user manual above to see what each of the values mean in the configuration file.
+Finally, this code generates the configuration files for n number of reference+strain sets. Keep in mind that most options have to be set manually within the code itself to fit individual needs. Please take a look at the CAMISIM user manual above to see what each of the values mean in the configuration file. This file saves the output for CAMISIM in the output directory, but also creates an individual output folder for each reference genome or reference+strain set.
 
 # Running CAMISIM
 
@@ -47,9 +47,22 @@ For cases of several hundred references/reference+strain sets, a shell script ca
 
 It's important to thoroughly check the file paths for the inputs and outputs. I suggest using the CAMISIM directory as the main input for CAMISIM. Inside the CAMISIM directory, I have a folder for the configuration files, a folder for the FASTA files, and a folder for the *de novo* files. These folders help keep track of where everything is, especially if there are many files.
 
-/Users/sarahussin/CAMISIM
+/Users/sarahussin/CAMISIM_Output - contains all the CAMISIM output for each reference genome or reference+strain set
 
-  /CAMISIM/FASTA_Files/
+/Users/sarahussin/CAMISIM - contains all the scripts and tools needed for CAMISIM to run
 
-    {containes all the 
+/CAMISIM/FASTA_Files/ - contains all the .fa files for every single reference and strain
 
+/CAMISIM/Ini_Files/ - contains all the configuration files for every reference genome or reference+strain set
+
+/CAMISIM/Config_Files/ - contains all the metagenome and id to genome files for every reference genome or reference+strain set
+
+# Terminal Commands
+
+{docker pull cami/camisim:1.3.0} is required to pull the CAMSIM docker container
+
+{docker run -v "/Users/sarahussin/CAMISIM:/input:rw" -v "/Users/sarahussin/CAMISIM_Output:/output:rw" cami/camisim:1.3.0 metagenomesimulation.py /input/default_config1.ini} is the command to run CAMISIM
+
+{chmod +x} is required to make a shell script executable
+
+{./CAMISIM.sh} is required to run a shell script
